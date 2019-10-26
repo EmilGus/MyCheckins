@@ -12,19 +12,19 @@
         android:id="@+id/checkin_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:hint="Title" />
 
     <EditText
         android:id="@+id/checkin_place"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:hint="Place" />
 
     <EditText
         android:id="@+id/checkin_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:hint="Details" />
 
     <Button
         android:id="@+id/checkin_date"
@@ -35,6 +35,7 @@
         android:id="@+id/checkin_position"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         />
 
     <Button
