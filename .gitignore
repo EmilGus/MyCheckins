@@ -1,5 +1,5 @@
 # Built application files
-*.apk
+#*.apk # Assignment requires us to commit an .apk
 *.ap_
 *.aab
 
