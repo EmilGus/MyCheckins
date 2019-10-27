@@ -8,6 +8,7 @@
         android:id="@+id/checkin_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="TextView" />
 
     <TextView
@@ -20,5 +21,6 @@
         android:id="@+id/checkin_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="italic"
         android:text="TextView" />
 </LinearLayout>
