@@ -23,6 +23,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
@@ -63,6 +64,7 @@ public class CheckinFragment extends Fragment {
     private ImageView mImageView;
     private File mPhotoFile;
     private TextView mPosition;
+    private Button mHelpButton;
 
     private GoogleApiClient mClient;
 

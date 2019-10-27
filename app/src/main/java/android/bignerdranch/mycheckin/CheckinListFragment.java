@@ -2,6 +2,7 @@ package android.bignerdranch.mycheckin;
 
 import android.bignerdranch.mycheckin.R;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -28,7 +29,8 @@ public class CheckinListFragment extends Fragment {
     private TextView mTitle;
     private TextView mPlace;
     private TextView mDate;
-    private Button mTestButton;
+    private Button mNewButton;
+    private Button mHelpButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -43,8 +45,8 @@ public class CheckinListFragment extends Fragment {
         mRecyclerView = (RecyclerView) v.findViewById(R.id.checkin_recycle_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        mTestButton = v.findViewById(R.id.new_button);
-        mTestButton.setOnClickListener(new View.OnClickListener() {
+        mNewButton = v.findViewById(R.id.new_button);
+        mNewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Checkin checkin = new Checkin();
@@ -53,6 +55,18 @@ public class CheckinListFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+
+        mHelpButton = v.findViewById(R.id.help_button);
+        mHelpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(getString(R.string.help_url)));
+                startActivity(intent);
+            }
+        });
+
 
         updateUI();
 
