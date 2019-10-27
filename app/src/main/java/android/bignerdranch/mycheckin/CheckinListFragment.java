@@ -1,6 +1,5 @@
 package android.bignerdranch.mycheckin;
 
-import android.bignerdranch.mycheckin.R;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,15 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -82,7 +76,7 @@ public class CheckinListFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
         super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.fragment_checkin_list, menu);
+        inflater.inflate(R.menu.fragment_checkin_list_menu, menu);
     }
 
     private class CheckinHolder extends RecyclerView.ViewHolder implements View.OnClickListener{

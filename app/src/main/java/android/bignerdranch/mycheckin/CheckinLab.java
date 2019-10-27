@@ -63,7 +63,7 @@ public class CheckinLab {
 
     public Checkin getCheckin(UUID id){
         CheckinCursorWrapper cursor = queryCrimes(
-                CheckinTable.Cols.UUID + " = ?",
+                CheckinTable.Cols.ID + " = ?",
                 new String[]{id.toString()}
         );
 
@@ -82,11 +82,11 @@ public class CheckinLab {
         String uuidString = checkin.getID().toString();
         ContentValues values = getContentValues(checkin);
 
-        mDatabase.update(CheckinTable.NAME, values, CheckinTable.Cols.UUID + " = ?", new String[]{uuidString});
+        mDatabase.update(CheckinTable.NAME, values, CheckinTable.Cols.ID + " = ?", new String[]{uuidString});
     }
 
     public void deleteCheckin(UUID id){
-        mDatabase.delete(CheckinDBschema.CheckinTable.NAME,CheckinTable.Cols.UUID + " = ?", new String[]{id.toString()});
+        mDatabase.delete(CheckinDBschema.CheckinTable.NAME,CheckinTable.Cols.ID + " = ?", new String[]{id.toString()});
     }
 
     private CheckinCursorWrapper queryCrimes(String whereClause, String[] whereArgs){
@@ -105,14 +105,14 @@ public class CheckinLab {
 
     private static ContentValues getContentValues(Checkin checkin){
         ContentValues values = new ContentValues();
-        values.put(CheckinTable.Cols.UUID, checkin.getID().toString());
+        values.put(CheckinTable.Cols.ID, checkin.getID().toString());
         values.put(CheckinTable.Cols.TITLE, checkin.getTitle());
         values.put(CheckinTable.Cols.PLACE, checkin.getPlace());
         values.put(CheckinTable.Cols.DETAILS, checkin.getDetails());
         values.put(CheckinTable.Cols.DATE, checkin.getDate().toString());
         values.put(CheckinTable.Cols.LAT, checkin.getLat());
         values.put(CheckinTable.Cols.LNG, checkin.getLng());
-        values.put(CheckinTable.Cols.PHOTO, checkin.getPhoto());
+        //values.put(CheckinTable.Cols.PHOTO, checkin.getPhoto());
 
         return values;
     }

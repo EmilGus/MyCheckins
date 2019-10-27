@@ -81,13 +81,13 @@ public class Checkin {
         mDate = date;
     }
 
-    public String getPhoto() {
-        return mPhoto;
-    }
+    //public String getPhoto() {
+    //    return mPhoto;
+    //}
 
-    public void setPhoto(String photo) {
-        mPhoto = photo;
-    }
+    //public void setPhoto(String photo) {
+    //    mPhoto = photo;
+    //}
 
     public String getPhotoFilename(){
         return "IMG_" + getID().toString() + ".jpg";
